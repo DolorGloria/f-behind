@@ -20,7 +20,7 @@
         prop="order_id"
         label="订单编号"
       />
-      <el-empty slot="empty" description="数据为空" :image-size="200"></el-empty>
+      <el-empty slot="empty" description="数据为空" :image-size="200" />
     </el-table>
   </div>
 </template>

@@ -34,8 +34,8 @@
           v-model="form.description"
           type="textarea"
           :rows="2"
-          placeholder="请输入产品描述">
-        </el-input>
+          placeholder="请输入产品描述"
+        />
       </el-form-item>
       <el-form-item>
         <el-button type="primary" @click="create">创建</el-button>
@@ -71,13 +71,13 @@ export default {
   data() {
     return {
       form: {
-        id:'',
+        id: '',
         name: '',
         amount: 0,
         price: 0,
         rule: '',
         date: '',
-        description:''
+        description: ''
       },
       rules: [],
       checkedRules: [],
@@ -87,7 +87,7 @@ export default {
         price: { required: true, message: '请输入产品价格', trigger: 'blur' },
         amount: { required: true, message: '请输入产品数量', trigger: 'blur' },
         // rule: { required: true, message: '请至少选择一个准入规则', trigger: 'change', type: 'array' },
-        date: { required: true, message: '请选择起止时间', trigger: 'change'}
+        date: { required: true, message: '请选择起止时间', trigger: 'change' }
       },
       isIndeterminate: true,
       checkAll: false,
@@ -115,12 +115,12 @@ export default {
       })
     },
     onSubmit() {
-      var ruleStr=''
+      var ruleStr = ''
       for (let i = 0; i < this.checkedRules.length; i++) {
-        ruleStr+=(this.checkedRules[i].id+';')
+        ruleStr += (this.checkedRules[i].id + ';')
       }
       const submitForm = {
-        begin_time:this.form.date[0],
+        begin_time: this.form.date[0],
         description: this.form.description,
         end_time: this.form.date[1],
         id: this.form.id,
@@ -150,7 +150,7 @@ export default {
       })
     },
     handleCheckedRulesChange(val) {
-      this.form.rule=val
+      this.form.rule = val
     },
     fetchRules() {
       getRules().then(res => {

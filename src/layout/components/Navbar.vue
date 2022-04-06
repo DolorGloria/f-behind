@@ -7,7 +7,7 @@
     <div class="right-menu">
       <el-dropdown class="avatar-container" trigger="click">
         <div class="avatar-wrapper">
-<!--          <img :src="require('/src/icons/svg/user.svg')" class="user-avatar">-->
+          <!--          <img :src="require('/src/icons/svg/user.svg')" class="user-avatar">-->
           <img :src="imgUrl" class="user-avatar">
           <i class="el-icon-caret-bottom" />
         </div>
@@ -32,14 +32,14 @@ import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
 
 export default {
+  components: {
+    Breadcrumb,
+    Hamburger
+  },
   data() {
     return {
       imgUrl: require('../../assets/user.svg')
     }
-  },
-  components: {
-    Breadcrumb,
-    Hamburger
   },
   computed: {
     ...mapGetters([

@@ -4,36 +4,37 @@
       v-loading="listLoading"
       :data="ruleData"
       border
-      style="width: 100%">
+      style="width: 100%"
+    >
       <el-table-column
         align="center"
         prop="id"
         label="id"
-        width="180">
-      </el-table-column>
+        width="180"
+      />
       <el-table-column
         align="center"
         prop="name"
         label="规则名"
-        width="180">
-      </el-table-column>
+        width="180"
+      />
       <el-table-column
         align="center"
         prop="object"
-        label="面向对象">
-      </el-table-column>
+        label="面向对象"
+      />
       <el-table-column
         align="center"
         prop="description"
-        label="规则描述">
-      </el-table-column>
-      <el-empty slot="empty" description="数据为空" :image-size="200"></el-empty>
+        label="规则描述"
+      />
+      <el-empty slot="empty" description="数据为空" :image-size="200" />
     </el-table>
   </div>
 </template>
 
 <script>
-import { getRules } from "@/api/rule";
+import { getRules } from '@/api/rule'
 
 export default {
   data() {
